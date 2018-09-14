@@ -1,3 +1,2 @@
-./node_modules/
-./vueClient/my-project/node_modules/
-# 
+./node_modules
+./vueClient/my-project/node_modules
