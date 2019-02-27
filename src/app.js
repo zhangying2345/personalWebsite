@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var ip = require('ip');
-// 托管静态文件
+// 托管静态文件y
 app.use(express.static('../vueClient/my-project/dist/'));
 
 app.get('/', function (req, res) {
