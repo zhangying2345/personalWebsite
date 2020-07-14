@@ -71,6 +71,7 @@ app.get('/login/callback', async (req, res) => {
 
   let userInfo = github_API_userInfo.data;
   res.cookie('username', userInfo.login);
+  res.cookie('avatar', userInfo.avatar_url);
   res.redirect(301, 'http://192.168.0.3:3000/');
   return;
 

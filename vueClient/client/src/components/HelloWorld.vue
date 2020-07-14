@@ -1,7 +1,11 @@
 <template>
   <div class="hello">
-     <a href='https://github.com/login/oauth/authorize?client_id=Iv1.38662f7ecc0b2882'> 使用 GitHub 账号登录 </a>
-
+    <a
+      href="https://github.com/login/oauth/authorize?client_id=Iv1.38662f7ecc0b2882"
+    >
+      使用 GitHub 账号登录
+    </a>
+    <div>用户名：{{ userName }}</div>
   </div>
 </template>
 
@@ -9,9 +13,17 @@
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+  computed: {
+    userName: function() {
+      if (document.cookie) {
+        return document.cookie.split(';')[0];
+      }
+      return 'NULL';
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
